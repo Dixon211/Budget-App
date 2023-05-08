@@ -42,7 +42,7 @@ class Category:
             return True
         else:
             return False
-def create_spend_chart(categories = []):
+def create_spend_chart(categories):
     #this string is like adding 2 actions at once. it creates a list of the elements that make up an element with list() and then does a for loop to do it to all elements in the categories list. This turns all the category names into lists of their words and puts that into the words list
     words = [list(category.name) for category in categories]
     
@@ -228,7 +228,7 @@ def create_spend_chart(categories = []):
 
     chart = f"{title_line}{hund_line}\n{ninty_line}\n{eighty_line}\n{seventy_line}\n{sixty_line}\n{fifty_line}\n{forty_line}\n{thirty_line}\n{twenty_line}\n{tens_line}\n{zero_line}\n{divider_line}\n{block_of_categories}"
 
-    return chart
+    return print(chart)
 
 food = Category("Food")
 entertainment = Category("Entertainment")
@@ -240,5 +240,3 @@ food.withdraw(105.55)
 entertainment.withdraw(33.40)
 business.withdraw(10.99)
 create_spend_chart([business, food, entertainment])
-answer = "Percentage spent by category\n100|          \n 90|          \n 80|          \n 70|    o     \n 60|    o     \n 50|    o     \n 40|    o     \n 30|    o     \n 20|    o  o  \n 10|    o  o  \n  0| o  o  o  \n    ----------\n     B  F  E  \n     u  o  n  \n     s  o  t  \n     i  d  e  \n     n     r  \n     e     t  \n     s     a  \n     s     i  \n           n  \n           m  \n           e  \n           n  \n           t  "
-print(answer)
